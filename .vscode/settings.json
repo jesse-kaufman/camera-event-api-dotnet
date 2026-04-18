@@ -1,3 +1,11 @@
 {
-  "cSpell.words": ["ASPNETCORE", "buildtransitive", "contentfiles"]
+  "cSpell.words": [
+    "accessibilities",
+    "ASPNETCORE",
+    "buildtransitive",
+    "contentfiles",
+    "ipascalcase",
+    "pascalcase",
+    "tpascalcase"
+  ]
 }

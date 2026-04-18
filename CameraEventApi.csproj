@@ -1,11 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<?xml-model href="https://github.com/dotnet/msbuild/blob/v17.14.13/src/MSBuild/Microsoft.Build.xsd"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
-    <AnalysisLevel>latest-recommended</AnalysisLevel>
+    <AnalysisLevel>latest</AnalysisLevel>
     <AnalysisMode>Recommended</AnalysisMode>
+    <AnalysisModeSecurity>All</AnalysisModeSecurity>
     <ApiCompatStrictMode>true</ApiCompatStrictMode>
-    <EnableStrictModeForBaselineValidation>true</EnableStrictModeForBaselineValidation>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <ImplicitUsings>enable</ImplicitUsings>
     <NoWarn>CA1848,CA1873</NoWarn>
     <Nullable>enable</Nullable>

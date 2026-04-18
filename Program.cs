@@ -1,4 +1,5 @@
 using CameraEventApi.Data;
+using CameraEventApi.Routes;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,5 +13,6 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 var app = builder.Build();
 
 app.UseHttpsRedirection();
+app.MapCameraEventRoutes();
 
 app.Run();

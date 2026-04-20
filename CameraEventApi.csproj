@@ -2,13 +2,13 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <AnalysisLevel>latest</AnalysisLevel>
-    <AnalysisMode>Recommended</AnalysisMode>
+    <AnalysisMode>All</AnalysisMode>
     <AnalysisModeSecurity>All</AnalysisModeSecurity>
     <ApiCompatStrictMode>true</ApiCompatStrictMode>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <ImplicitUsings>enable</ImplicitUsings>
-    <NoWarn>CA1848,CA1873</NoWarn>
+    <NoWarn>CA1848,CA1873,CA2007</NoWarn>
     <Nullable>enable</Nullable>
     <RootNamespace>CameraEventApi</RootNamespace>
     <TargetFramework>net10.0</TargetFramework>

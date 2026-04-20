@@ -34,7 +34,7 @@ internal class CameraEventService(AppDbContext db)
 
     var cameraEvent = new CameraEvent
     {
-      Timestamp = request.Timestamp,
+      EventTime = request.EventTime,
       Camera = request.Camera,
       Location = request.Location,
       Type = request.Type,

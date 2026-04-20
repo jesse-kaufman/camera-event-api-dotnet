@@ -12,8 +12,8 @@ internal class CameraEventConfiguration : IEntityTypeConfiguration<CameraEvent>
     // Id
     builder.HasKey(e => e.Id);
 
-    // Timestamp
-    builder.Property(e => e.Timestamp).IsRequired();
+    // EventTime
+    builder.Property(e => e.EventTime).IsRequired();
 
     // Camera
     builder.Property(e => e.Camera).IsRequired().HasMaxLength(50);

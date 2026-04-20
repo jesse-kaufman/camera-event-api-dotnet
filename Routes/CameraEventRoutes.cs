@@ -1,6 +1,7 @@
 using CameraEventApi.Data;
 using CameraEventApi.Data.Entities;
-using Microsoft.EntityFrameworkCore;
+using CameraEventApi.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CameraEventApi.Routes;
 
@@ -8,23 +9,30 @@ public static class CameraEventRoutes
 {
   public static void MapCameraEventRoutes(this WebApplication app)
   {
-    var group = app.MapGroup("/api/events");
+    var apiBase = "/api/camera-events";
+    var group = app.MapGroup(apiBase);
 
     //
     // Get camera events
     //
-    group.MapGet("/", async (AppDbContext db) => await db.CameraEvents.ToListAsync());
-
+    group.MapGet(
+      "/",
+      async (
+        [FromServices] CameraEventService service,
+        string? camera,
+        string? location,
+        DetectionType? type
+      ) => await service.GetAllAsync(camera, location, type)
+    );
     //
     // Create camera event
     //
     group.MapPost(
       "/",
-      async (CameraEvent cameraEvent, AppDbContext db) =>
+      async (CreateCameraEventRequest request, CameraEventService service) =>
       {
-        db.CameraEvents.Add(cameraEvent);
-        await db.SaveChangesAsync();
-        return Results.Created($"/api/events/{cameraEvent.Id}", cameraEvent);
+        var cameraEvent = await service.SaveAsync(request);
+        return Results.Created($"{apiBase}/{cameraEvent.Id}", cameraEvent);
       }
     );
   }

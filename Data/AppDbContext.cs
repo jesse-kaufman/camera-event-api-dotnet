@@ -6,7 +6,7 @@ namespace CameraEventApi.Data;
 
 internal class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
-  public DbSet<CameraEvent> CameraEvents { get; set; }
+  public required DbSet<CameraEvent> CameraEvents { get; set; }
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {

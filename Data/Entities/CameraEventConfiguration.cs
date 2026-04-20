@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace CameraEventApi.Data.Entities;
 
-public class CameraEventConfiguration : IEntityTypeConfiguration<CameraEvent>
+internal class CameraEventConfiguration : IEntityTypeConfiguration<CameraEvent>
 {
   public void Configure(EntityTypeBuilder<CameraEvent> builder)
   {

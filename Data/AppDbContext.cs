@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CameraEventApi.Data;
 
-public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+internal class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {
   public DbSet<CameraEvent> CameraEvents { get; set; }
 

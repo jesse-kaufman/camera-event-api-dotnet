@@ -1,6 +1,6 @@
 namespace CameraEventApi.Data.Entities;
 
-public enum DetectionType
+internal enum DetectionType
 {
   Linked,
   Motion,
@@ -10,7 +10,7 @@ public enum DetectionType
   Pet,
 }
 
-public class CameraEvent
+internal class CameraEvent
 {
   public int Id { get; set; }
   public DateTime Timestamp { get; set; }
@@ -21,7 +21,7 @@ public class CameraEvent
   public required string Description { get; set; }
 }
 
-public class CreateCameraEventRequest
+internal class CreateCameraEventRequest
 {
   public required DateTime Timestamp { get; set; }
   public required string Camera { get; set; }

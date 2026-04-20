@@ -1,11 +1,10 @@
-using CameraEventApi.Data;
 using CameraEventApi.Data.Entities;
 using CameraEventApi.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CameraEventApi.Routes;
 
-public static class CameraEventRoutes
+internal static class CameraEventRoutes
 {
   public static void MapCameraEventRoutes(this WebApplication app)
   {

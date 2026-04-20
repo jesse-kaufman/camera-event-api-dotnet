@@ -1,0 +1,14 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "joshbolduc.commitlint",
+    "mikestead.dotenv",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "zainchen.json",
+    "mohsen1.prettify-json",
+    "ms-dotnettools.csharp",
+    "ms-dotnettools.csdevkit",
+    "csharpier.csharpier-vscode"
+  ]
+}

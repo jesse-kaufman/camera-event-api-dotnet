@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CameraEventApi.Services;
 
-internal class CameraEventService(AppDbContext db)
+public class CameraEventService(AppDbContext db)
 {
   private readonly AppDbContext _db = db;
 
@@ -28,10 +28,8 @@ internal class CameraEventService(AppDbContext db)
     return await _db.CameraEvents.ToListAsync();
   }
 
-  public async Task<CameraEvent> SaveAsync(CreateCameraEventRequest? request)
+  public async Task<CameraEvent> SaveAsync(CreateCameraEventRequest request)
   {
-    ArgumentNullException.ThrowIfNull(request);
-
     var cameraEvent = new CameraEvent
     {
       EventTime = request.EventTime,

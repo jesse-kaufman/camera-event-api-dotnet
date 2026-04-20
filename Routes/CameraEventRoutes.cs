@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace CameraEventApi.Routes;
 
-internal static class CameraEventRoutes
+public static class CameraEventRoutes
 {
   public static void MapCameraEventRoutes(this WebApplication app)
   {

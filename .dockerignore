@@ -1,0 +1,6 @@
+bin/
+obj/
+*.sln
+.git/
+.vscode/
+data/

@@ -1,0 +1,24 @@
+name: event-api-dotnet
+services:
+  intranet:
+    container_name: event-api-dotnet
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    volumes:
+      - ./_data:/app/data
+    restart: unless-stopped
+    read_only: true
+    user: ${PUID:-1000}:${GUID:-1000}
+    ports:
+      - 8188:5155
+    cap_drop:
+      - ALL
+    deploy:
+      resources:
+        limits:
+          cpus: "4"
+          pids: 500
+          memory: 2G
+    security_opt:
+      - no-new-privileges=true

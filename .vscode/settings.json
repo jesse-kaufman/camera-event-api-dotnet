@@ -6,6 +6,7 @@
     "contentfiles",
     "ipascalcase",
     "pascalcase",
+    "roslynator",
     "slnx",
     "tpascalcase"
   ]
